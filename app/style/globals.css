@@ -9,6 +9,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: Roboto, sans-serif; /* Set default font family */
-  /* background: #f9f5f3; */
-  background: linear-gradient(to right bottom, #fbdb89, #d3c7c3);
+  background: #f9f5f3;
+  /* background: linear-gradient(to right bottom, #fbdb89, #d3c7c3); */
 }

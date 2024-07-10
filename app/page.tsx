@@ -1,7 +1,7 @@
 /** @format */
 
-import Image from "next/image";
 import ImageSlide from "./components/ImageSlide";
+import MealsList from "./components/MealsList";
 
 export default function Home() {
   return (
@@ -23,13 +23,15 @@ export default function Home() {
               <button className="inline-flex  border-[#fbdb89]  border-2 py-2 px-6 focus:outline-none  rounded text-lg">
                 Share Meal
               </button>
-              <button className="ml-4 inline-flex text-[ #615551] bg-[#f9f5f3] hover:bg-[#f2efee] border-0 py-2 px-6 focus:outline-none  rounded text-lg">
+              <button className="ml-4 inline-flex text-white bg-[hsl(34,57%,60%)] hover:bg-[hsl(34,71%,67%)] border-0 py-2 px-6 focus:outline-none  rounded text-lg">
                 Explore Meals
               </button>
             </div>
           </div>
         </div>
       </section>
+
+      <MealsList />
     </main>
   );
 }

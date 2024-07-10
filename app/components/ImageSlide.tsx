@@ -65,7 +65,7 @@ export default function ImageSlideShow() {
 
   return (
     <div
-      className="max-w-5xl border border-indigo-200 flex gap-2 justify-center"
+      className="max-w-5xl  flex gap-2 justify-center"
       aria-labelledby="image-description"
     >
       {imageData.map((image, index) => (
@@ -75,7 +75,7 @@ export default function ImageSlideShow() {
           alt={image.alt}
           className={
             index === currentImage
-              ? "object-cover object-center rounded-md border-4 border-[#f9f5f3] shadow-md transition-opacity duration-75 "
+              ? "object-cover object-center rounded-md border-[6px] border-[#615551] shadow-md transition-opacity duration-75 p-4"
               : "hidden "
           } // Set hidden class for non-current images
           width={600}
