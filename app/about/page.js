@@ -1,9 +1,10 @@
 /** @format */
 
 import Image from "next/image";
-import image1 from "@/public/image1.jpg";
-import image2 from "@/public/image2.jpg";
 import Link from "next/link";
+
+import image1 from "../../public/image1.jpg";
+import image2 from "../../public/image2.jpg";
 
 export const metadata = {
   title: "About",
@@ -14,11 +15,11 @@ export default async function Page() {
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-16 items-center">
         <div className="col-span-1 md:col-span-2 lg:col-span-3 order-2 md:order-1">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 md:mb-10 text-[#c26c66] font-medium font-mono">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 md:mb-10 text-[#c26c66] font-medium ">
             Welcome to Forkify
           </h1>
 
-          <div className="space-y-4 md:space-y-8 text-[#615551] font-light font-mono text-base sm:text-lg">
+          <div className="space-y-4 md:space-y-8 text-[#615551] font-light  text-base sm:text-lg">
             <p>
               Indulge in the essence of Italian culinary tradition with our
               pizza-sharing project. Here, where the love for authentic flavors
@@ -60,11 +61,11 @@ export default async function Page() {
         </div>
 
         <div className="col-span-1 md:col-span-2 lg:col-span-3 order-4">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 md:mb-10 text-[#c26c66] font-medium font-mono">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 md:mb-10 text-[#c26c66] font-medium ">
             Margherita pizza, created in 1889
           </h1>
 
-          <div className="space-y-4 md:space-y-8 text-[#615551] font-light font-mono text-base sm:text-lg">
+          <div className="space-y-4 md:space-y-8 text-[#615551] font-light  text-base sm:text-lg">
             <p>
               The origins of pizza trace back to ancient times, but the modern
               pizza as we know it today was invented in Naples, Italy. In the
@@ -85,8 +86,8 @@ export default async function Page() {
 
             <div className="mt-6 md:mt-8">
               <Link
-                href="/meal"
-                className="font-mono inline-block rounded-md bg-[hsl(34,57%,60%)] hover:bg-[hsl(34,71%,67%)] px-6 sm:px-8 py-3 sm:py-5 text-white text-base sm:text-lg font-semibold transition-all"
+                href="/meals"
+                className=" inline-block rounded-md bg-[hsl(34,57%,60%)] hover:bg-[hsl(34,71%,67%)] px-6 sm:px-8 py-3 sm:py-5 text-white text-base sm:text-lg font-semibold transition-all"
               >
                 Explore our meals
               </Link>

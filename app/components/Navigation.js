@@ -1,41 +1,5 @@
 /** @format */
 
-// /** @format */
-
-// import Link from "next/link";
-
-// export default async function Navigation() {
-//   return (
-//     <nav className="z-10 text-2xl font-medium text-[#615551]">
-//       <ul className="flex gap-16 items-center ">
-//         <li>
-//           <Link
-//             href="/meal"
-//             className="hover:text-green-600 transition-colors "
-//           >
-//             Meals
-//           </Link>
-//         </li>
-//         <li>
-//           <Link
-//             href="/about"
-//             className="hover:text-green-600 transition-colors"
-//           >
-//             About
-//           </Link>
-//         </li>
-//         <li>
-//           <Link
-//             href="/shareMeal"
-//             className="hover:text-green-600 transition-colors"
-//           >
-//             Guest area
-//           </Link>
-//         </li>
-//       </ul>
-//     </nav>
-//   );
-// }
 "use client";
 
 import Link from "next/link";
@@ -54,16 +18,16 @@ const Navigation = () => {
   }, [pathname]);
 
   const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/meal", label: "Meals" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
+    { href: "/meals", label: "Meals" },
+    { href: "/meals/share", label: "Share Meals" },
+    // { href: "/about", label: "About" },
+    { href: "/community", label: "Community" },
   ];
 
   return (
-    <nav className="bg-[#f9f5f3] shadow-md">
+    <nav className="">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-9">
-        <div className="flex justify-between h-20">
+        <div className="flex justify-between h-20 items-center">
           <Logo />
 
           {/* Desktop menu */}
@@ -72,9 +36,9 @@ const Navigation = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`px-3 py-2 rounded-md text-sm md:text-lg font-medium ${
+                className={`px-3 py-[5px] rounded-md text-sm md:text-xl font-medium ${
                   pathname === item.href
-                    ? "bg-[#f38e82] text-white"
+                    ? "bg-gradient-to-r from-orange-400 to-orange-600 hover:shadow-[0_0_12px_rgba(242,100,18,0.8)] text-white"
                     : "text-gray-700 hover:bg-[#f9d2cf] hover:text-gray-900"
                 }`}
               >

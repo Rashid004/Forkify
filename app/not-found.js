@@ -10,7 +10,7 @@ function NotFound() {
       </h1>
       <Link
         href="/"
-        className="inline-block bg-gray-500 text-white px-6 py-3 text-lg"
+        className="inline-block bg-green-500 text-white px-6 py-3 text-lg rounded-md"
       >
         Go back home
       </Link>
