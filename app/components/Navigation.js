@@ -19,7 +19,7 @@ const Navigation = () => {
 
   const navItems = [
     { href: "/meals", label: "Meals" },
-    { href: "/meals/share", label: "Share Meals" },
+    // { href: "/meals/share", label: "Share Meals" },
     // { href: "/about", label: "About" },
     { href: "/community", label: "Community" },
   ];
@@ -39,7 +39,7 @@ const Navigation = () => {
                 className={`px-3 py-[5px] rounded-md text-sm md:text-xl font-medium ${
                   pathname === item.href
                     ? "bg-gradient-to-r from-orange-400 to-orange-600 hover:shadow-[0_0_12px_rgba(242,100,18,0.8)] text-white"
-                    : "text-gray-700 hover:bg-[#f9d2cf] hover:text-gray-900"
+                    : "text-white hover:bg-[#f9d2cf] hover:text-gray-900"
                 }`}
               >
                 {item.label}

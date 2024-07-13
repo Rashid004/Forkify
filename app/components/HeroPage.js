@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <header className="flex flex-col md:flex-row gap-8 md:gap-12 m-8 md:m-12 w-[90%] max-w-6xl mx-auto">
-        <div className="w-full md:w-[40rem] h-64 md:h-96 bg-gray-200">
+        <div className="w-full md:w-[40rem] h-64 md:h-96">
           <ImageSlideShow />
         </div>
         <div className="flex flex-col justify-between">
@@ -17,7 +17,7 @@ export default function Home() {
             </h1>
             <p>Taste & share food from all over the world.</p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 text-lg md:text-xl mt-6">
+          <div className="flex flex-col sm:flex-row gap-4 text-lg md:text-xl mt-6 items-center">
             <Link
               href="/community"
               className="text-[#ff9b05] hover:text-[#f9b241]"

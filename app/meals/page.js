@@ -1,15 +1,21 @@
 /** @format */
 
 import Link from "next/link";
-import { getMeals } from "../../lib/meals";
+import { getMeals } from "../lib/meals";
 import MealGrid from "../components/meals/meal-grid";
+import { Suspense } from "react";
+import Loading from "../loading";
 
-async function MealsPage() {
+async function Meal() {
   const meal = await getMeals();
+  return <MealGrid meals={meal} />;
+}
+
+function MealsPage() {
   return (
-    <div className="max-h-full">
+    <div className="max-h-full w-[90%] max-w-[90rem] mx-auto">
       <header className="flex items-start flex-col justify-start gap-2">
-        <h1 className="font-semibold text-4xl -tracking-tight">
+        <h1 className="font-semibold text-4xl -tracking-tight text-[#ddd6cb]">
           Delicious meals, created{" "}
           <span className="font-bold text-orange-600">by you</span>
         </h1>
@@ -22,7 +28,15 @@ async function MealsPage() {
         </p>
       </header>
       <main className="">
-        <MealGrid meals={meal} />
+        <Suspense
+          fallback={
+            <p className="text-center">
+              <Loading />
+            </p>
+          }
+        >
+          <Meal />
+        </Suspense>
       </main>
     </div>
   );
