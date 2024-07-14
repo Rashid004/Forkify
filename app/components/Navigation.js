@@ -74,7 +74,7 @@ const Navigation = () => {
               className={`block px-3 py-2 rounded-md text-base font-medium ${
                 pathname === item.href
                   ? "bg-[#f38e82] text-white"
-                  : "text-gray-700 hover:bg-[#f9d2cf] hover:text-gray-900"
+                  : "text-gray-50 hover:bg-[#f9d2cf] hover:text-gray-900"
               }`}
             >
               {item.label}
