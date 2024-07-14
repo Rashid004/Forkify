@@ -2,7 +2,7 @@
 // "use client";
 // import { useState } from "react";
 import ImagePicker from "../../components/meals/image-picker";
-import shareMeal from "../../lib/action";
+import { shareMeal } from "../../lib/actions"; // Changed this line
 
 export default function ShareMealPage() {
   // const [isSubmitting, setIsSubmitting] = useState(false);
