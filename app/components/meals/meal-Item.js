@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function MealItem({ title, slug, image, summary, creator }) {
+export default function MealItem({ slug, title, image, summary, creator }) {
   return (
     <article className="flex flex-col justify-between h-full rounded shadow-lg overflow-hidden transition-all duration-300 ease-in-out text-[#ddd6cb] bg-gradient-to-r from-[#2c1e19] to-[#25200f]">
       <header>

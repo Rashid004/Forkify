@@ -1,7 +1,8 @@
 /** @format */
 
 import sql from "better-sqlite3";
-import fs from "node:fs";
+import fs from "node:fs/promises";
+import path from "path";
 import slugify from "slugify";
 import xss from "xss";
 
@@ -17,35 +18,48 @@ export function getMeal(slug) {
 }
 
 export async function saveMeal(meal) {
-  meal.slug = slugify(meal.title, { lower: true });
-  meal.instructions = xss(meal.instructions);
+  try {
+    meal.slug = slugify(meal.title, { lower: true });
+    meal.instructions = xss(meal.instructions);
 
-  const extension = meal.image.split(".").pop();
-  const fileName = `${meal.slug}.${extension}`;
-
-  const stream = fs.createWriteStream(`public/images/${fileName}`);
-
-  const bufferedImage = await meal.image.arrayBuffer();
-
-  stream.write(Buffer.from(bufferedImage), (error) => {
-    if (error) {
-      throw new Error("Saving image failed!");
+    if (!meal.image || !meal.image.buffer) {
+      throw new Error("Please provide a valid image file.");
     }
-  });
-  meal.image = `/images/${fileName}`;
 
-  db.prepare(
-    `
-    INSERT INTO meals
-    (title,summary,instructions,creator,creator_email,image,slug)
-    VALUES (
-       @title,
-       @summary,
-       @instructions,
-       @creator,
-       @creator_email
-       @image,
-       @slug,
-    ) `
-  ).run(meal);
+    const extension = path.extname(meal.image.name).toLowerCase();
+    const allowedExtensions = [".jpg", ".jpeg", ".png", ".gif"];
+
+    if (!allowedExtensions.includes(extension)) {
+      throw new Error("Only image files (JPG, JPEG, PNG, GIF) are allowed.");
+    }
+
+    const fileName = `${meal.slug}${extension}`;
+    const imagePath = path.join(process.cwd(), "public", "images", fileName);
+
+    await fs.writeFile(imagePath, meal.image.buffer);
+
+    meal.image = `/images/${fileName}`;
+
+    const insertQuery = `
+      INSERT INTO meals
+      (title, summary, instructions, creator, creator_email, image, slug)
+      VALUES (?, ?, ?, ?, ?, ?, ?)
+    `;
+
+    db.prepare(insertQuery).run(
+      meal.title,
+      meal.summary,
+      meal.instructions,
+      meal.creator,
+      meal.creator_email,
+      meal.image,
+      meal.slug
+    );
+
+    console.log("Meal saved successfully:", meal);
+    return meal;
+  } catch (error) {
+    console.error("Error saving meal:", error);
+    throw error;
+  }
 }
