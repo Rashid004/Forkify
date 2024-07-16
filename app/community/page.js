@@ -5,6 +5,11 @@ import mealIcon from "../../asset/icons/meal.png";
 import communityIcon from "../../asset/icons/community.png";
 import eventsIcon from "../../asset/icons/events.png";
 
+export const metadata = {
+  title: "Community",
+  description: "You can share your meals and communicate with each there.",
+};
+
 export default function CommunityPage() {
   return (
     <>

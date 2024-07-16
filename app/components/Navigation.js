@@ -1,5 +1,4 @@
 /** @format */
-
 "use client";
 
 import Link from "next/link";
@@ -19,9 +18,9 @@ const Navigation = () => {
 
   const navItems = [
     { href: "/meals", label: "Meals" },
-    // { href: "/meals/share", label: "Share Meals" },
-    // { href: "/about", label: "About" },
     { href: "/community", label: "Community" },
+    { href: "/account", label: "Guest" },
+    // { href: "/about", label: "About" },
   ];
 
   return (
@@ -45,6 +44,7 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
+            {/* <Link>Account</Link> */}
           </div>
 
           {/* Mobile menu button */}

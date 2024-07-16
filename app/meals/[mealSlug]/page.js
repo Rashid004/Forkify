@@ -3,6 +3,15 @@
 import Image from "next/image";
 import { getMeal } from "../../lib/meals";
 
+export async function generateMetadata({ params }) {
+  const meal = getMeal(params.mealSlug);
+
+  return {
+    title: meal.title,
+    description: meal.summary,
+  };
+}
+
 function MealDetailsPage({ params }) {
   const meal = getMeal(params.mealSlug);
 

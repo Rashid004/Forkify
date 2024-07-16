@@ -3,7 +3,7 @@
 import Link from "next/link";
 import ImageSlideShow from "./ImageSlide";
 
-export default function Home() {
+export default function HeroPage() {
   return (
     <>
       <header className="flex flex-col md:flex-row gap-8 md:gap-12 m-8 md:m-12 w-[90%] max-w-6xl mx-auto">

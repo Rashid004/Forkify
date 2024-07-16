@@ -6,6 +6,11 @@ import MealGrid from "../components/meals/meal-grid";
 import { Suspense } from "react";
 import Loading from "../loading";
 
+export const metadata = {
+  title: "All Meals",
+  description: "Browse the delicious meals shared by Max Rassia.",
+};
+
 async function Meal() {
   const meal = await getMeals();
   return <MealGrid meals={meal} />;
@@ -22,7 +27,6 @@ function MealsPage() {
         <p className="text-gray-500 text-[18px] ">
           Choose your favorite recipe and cook it yourself. It is easy and fun!
         </p>
-
         <p className="bg-gradient-to-r from-orange-400 to-orange-600 px-4 py-2 hover:from-[#fd4715] hover:to-[#f9b241] hover:shadow-[0_0_12px_rgba(242,100,18,0.8)] text-white rounded-md font-medium">
           <Link href="/meals/share">Share Your Favorite Recipe</Link>
         </p>

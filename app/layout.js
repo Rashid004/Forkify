@@ -9,10 +9,7 @@ const roboto = Roboto({
   subsets: ["latin"],
 });
 export const metadata = {
-  title: {
-    template: "%s / The Forkify",
-    default: "Welcome / The Forkify",
-  },
+  title: "The Forkify",
   description:
     "Discover the ultimate pizza-sharing platform to explore authentic Italian recipes, create gourmet delights.",
 };

@@ -5,7 +5,22 @@
 
 const nextConfig = {
   images: {
-    domains: ["forkify-api.herokuapp.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "forkify-api.herokuapp.com",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/api/auth/:path*",
+        destination: "/api/auth/:path*",
+      },
+    ];
   },
 };
 
