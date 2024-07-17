@@ -37,11 +37,3 @@ export async function shareMeal(formData) {
     return { error: error.message };
   }
 }
-
-export async function signInAction() {
-  await signIn("google", { redirectTo: "/meals" });
-}
-
-export async function signOutAction() {
-  await signOut({ redirectTo: "/" });
-}

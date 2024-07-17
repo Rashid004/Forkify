@@ -6,37 +6,39 @@ import ImageSlideShow from "./ImageSlide";
 export default function HeroPage() {
   return (
     <>
-      <header className="flex flex-col md:flex-row gap-8 md:gap-12 m-8 md:m-12 w-[90%] max-w-6xl mx-auto">
-        <div className="w-full md:w-[40rem] h-64 md:h-96">
+      <header className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-12 m-4 sm:m-6 lg:m-12 w-[95%] max-w-7xl mx-auto">
+        <div className="w-full lg:w-1/2 h-64 sm:h-80 lg:h-96">
           <ImageSlideShow />
         </div>
-        <div className="flex flex-col justify-between">
-          <div className="text-[#ddd6cb] text-lg md:text-xl">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold font-['Montserrat',sans-serif] uppercase tracking-wide bg-gradient-to-r from-[#f9572a] to-[#ffc905] bg-clip-text text-transparent mb-4">
+        <div className="flex flex-col justify-between lg:w-1/2">
+          <div className="text-[#ddd6cb] text-base sm:text-lg lg:text-xl">
+            <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold font-['Montserrat',sans-serif] uppercase tracking-wide bg-gradient-to-r from-[#f9572a] to-[#ffc905] bg-clip-text text-transparent mb-3 sm:mb-4">
               NextLevel Food for NextLevel Foodies
             </h1>
             <p>Taste & share food from all over the world.</p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 text-lg md:text-xl mt-6 items-center">
+          <div className="flex flex-col sm:flex-row gap-4 text-base sm:text-lg lg:text-xl mt-4 sm:mt-6 items-center">
             <Link
               href="/community"
-              className="text-[#ff9b05] hover:text-[#f9b241]"
+              className="text-[#ff9b05] hover:text-[#f9b241] w-full sm:w-auto text-center"
             >
               Join the Community
             </Link>
             <Link
               href="/meals"
-              className="inline-block py-2 px-4 rounded-lg bg-gradient-to-r from-[#f9572a] to-[#ff9b05] text-white font-bold hover:from-[#fd4715] hover:to-[#f9b241]"
+              className="w-full sm:w-auto text-center py-2 px-4 rounded-lg bg-gradient-to-r from-[#f9572a] to-[#ff9b05] text-white font-bold hover:from-[#fd4715] hover:to-[#f9b241]"
             >
               Explore Meals
             </Link>
           </div>
         </div>
       </header>
-      <main>
-        <section className="flex flex-col text-[#ddd6cb] text-lg md:text-xl max-w-3xl w-[90%] mx-auto my-8 md:my-12 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">How it works</h2>
-          <p className="mb-4">
+      <main className="px-4 sm:px-6 lg:px-8">
+        <section className="flex flex-col text-[#ddd6cb] text-base sm:text-lg lg:text-xl max-w-3xl w-full mx-auto my-6 sm:my-8 lg:my-12 text-center">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">
+            How it works
+          </h2>
+          <p className="mb-3 sm:mb-4">
             NextLevel Food is a platform for foodies to share their favorite
             recipes with the world. It&apos;s a place to discover new dishes,
             and to connect with other food lovers.
@@ -46,11 +48,11 @@ export default function HeroPage() {
             with other food lovers.
           </p>
         </section>
-        <section className="flex flex-col text-[#ddd6cb] text-lg md:text-xl max-w-3xl w-[90%] mx-auto my-8 md:my-12 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+        <section className="flex flex-col text-[#ddd6cb] text-base sm:text-lg lg:text-xl max-w-3xl w-full mx-auto my-6 sm:my-8 lg:my-12 text-center">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">
             Why NextLevel Food?
           </h2>
-          <p className="mb-4">
+          <p className="mb-3 sm:mb-4">
             NextLevel Food is a platform for foodies to share their favorite
             recipes with the world. It&apos;s a place to discover new dishes,
             and to connect with other food lovers.
