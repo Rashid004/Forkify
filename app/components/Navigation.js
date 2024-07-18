@@ -19,8 +19,6 @@ const Navigation = () => {
   const navItems = [
     { href: "/meals", label: "Meals" },
     { href: "/community", label: "Community" },
-    { href: "/account", label: "Guest" },
-    // { href: "/about", label: "About" },
   ];
 
   return (
