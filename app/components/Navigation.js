@@ -46,7 +46,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="sm:hidden flex items-center">
+          <div className="sm:hidden flex items-center ">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#f38e82]"
@@ -69,7 +69,7 @@ const Navigation = () => {
             <Link
               key={item.href}
               href={item.href}
-              className={`block px-3 py-2 rounded-md text-base font-medium ${
+              className={`block px-3 py-2 rounded-md text-base font-medium text-center ${
                 pathname === item.href
                   ? "bg-[#f38e82] text-white"
                   : "text-gray-50 hover:bg-[#f9d2cf] hover:text-gray-900"

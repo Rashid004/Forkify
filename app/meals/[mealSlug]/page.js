@@ -44,7 +44,7 @@ function MealDetailsPage({ params }) {
           <p className="text-xl md:text-2xl mt-4">{meal.summary}</p>
         </div>
       </header>
-      <main className="text-lg md:text-xl leading-relaxed bg-[#6e6464] text-[#13120f] rounded-lg shadow-md p-6 md:p-8 max-w-4xl mx-auto my-8 animate-fade-slide-in-from-bottom">
+      <main className="text-lg md:text-xl leading-relaxed bg-[#6e6464] text-[#13120f] rounded-lg shadow-md p-4 md:p-8 max-w-4xl mx-auto my-8 animate-fade-slide-in-from-bottom">
         <p dangerouslySetInnerHTML={{ __html: meal.instructions }}></p>
       </main>
     </>
