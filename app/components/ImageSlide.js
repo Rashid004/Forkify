@@ -104,7 +104,7 @@ export default function ImageSlideshow() {
                 ? "opacity-100 scale-100 translate-x-0 rotate-0 z-10"
                 : "opacity-0 scale-110 -translate-x-4 -rotate-5"
             }`}
-          sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 33vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw"
           priority={index === 0}
           fill
         />

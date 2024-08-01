@@ -29,3 +29,31 @@ body {
     color: #e9e9e9;
   }
 }
+
+@media screen and (max-width: 390px) {
+  /* iPhone 12, iPhone 12 Pro */
+  .header-content {
+    padding: 1rem;
+  }
+  .hero-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .header-content {
+    padding: 1.25rem;
+  }
+  .hero-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 393px) {
+  .header-content {
+    padding: 1rem;
+  }
+  .hero-title {
+    font-size: 1.5rem;
+  }
+}
